@@ -31,13 +31,17 @@ public class DriverFactory {
                 switch (ReadProperties.getBrowser()) {
                     case "chrome":
                         ChromeOptions options = new ChromeOptions();
-                        options.setHeadless(ReadProperties.getHeadLessStatus());
+                        if (ReadProperties.getHeadLessStatus()){
+                            options.addArguments("--headless=new");
+                        }
                         driverPool.set(new ChromeDriver(options));
                         break;
 
                     case "firefox":
                         FirefoxOptions firefoxOptions = new FirefoxOptions();
-                        firefoxOptions.setHeadless(ReadProperties.getHeadLessStatus());
+                        if (ReadProperties.getHeadLessStatus()){
+                            firefoxOptions.addArguments("--headless=new");
+                        }
                         driverPool.set(new FirefoxDriver(firefoxOptions));
                         break;
 
