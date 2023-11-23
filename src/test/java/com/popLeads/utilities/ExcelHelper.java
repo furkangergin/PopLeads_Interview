@@ -17,7 +17,7 @@ public class ExcelHelper {
 
         String result = null;
 
-        String path = "src/test/resources/TrendyolUser.xlsx";
+        String path = "src/test/resources/PopLeads.xlsx";
         XSSFWorkbook workbook = null;
         try {
             workbook = new XSSFWorkbook(path);
@@ -35,7 +35,7 @@ public class ExcelHelper {
 
         String result = null;
 
-        String path = "src/test/resources/TrendyolUser.xlsx";
+        String path = "src/test/resources/PopLeads.xlsx";
         XSSFWorkbook workbook = null;
         try {
             workbook = new XSSFWorkbook(path);
