@@ -1,15 +1,12 @@
-package com.optiim.stepDefinition;
+package com.popLeads.stepDefinition;
 
 
-import com.optiim.utilities.DriverFactory;
-import com.optiim.utilities.ExcelHelper;
+import com.popLeads.utilities.DriverFactory;
+import com.popLeads.utilities.ExcelHelper;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
-import java.nio.file.Paths;
-import java.sql.Driver;
 
 public class Hooks {
 
@@ -18,7 +15,7 @@ public class Hooks {
         String result = scenario.getStatus().name();
         System.out.println("result = " + result);
         ExcelHelper.writeExcel(scenario.getName() + " " + result + " olarak sonuçlandı.");
-        DriverFactory.closeDriver();
+         //DriverFactory.closeDriver();
     }
 
     @After
@@ -30,7 +27,6 @@ public class Hooks {
             byte[] screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
-        //  BrowserUtils.sleep(3);
-        DriverFactory.closeDriver();
+        //DriverFactory.closeDriver();
     }
 }

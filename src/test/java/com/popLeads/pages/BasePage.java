@@ -1,6 +1,6 @@
-package com.optiim.pages;
+package com.popLeads.pages;
 
-import com.optiim.utilities.DriverFactory;
+import com.popLeads.utilities.DriverFactory;
 import org.openqa.selenium.support.PageFactory;
 
 public abstract class BasePage {

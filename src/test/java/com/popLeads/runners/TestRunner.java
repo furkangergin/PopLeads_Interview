@@ -1,4 +1,4 @@
-package com.optiim.runners;
+package com.popLeads.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         plugin = {
-                //"pretty",
+                "pretty",
                 "html:target/cucumber-report.html",
                 "json:target/cucumber-report.json",
                 "rerun:target/cucumber-report.txt",
@@ -16,10 +16,10 @@ import org.junit.runner.RunWith;
 
         },
         features = "src/test/resources/features",
-        glue = "com/optiim/stepDefinition",
+        glue = "com/popLeads/stepDefinition",
         dryRun = false,
         publish = true,
-        tags = "@optiim"
+        tags = "@pop"
 
 )
 
